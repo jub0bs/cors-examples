@@ -1,0 +1,58 @@
+package main
+
+import (
+	"log"
+	"net/http"
+
+	"github.com/jub0bs/cors"
+	"github.com/labstack/echo/v4"
+)
+
+func main() {
+	e := echo.New()
+	e.GET("/hello", handleHello) // note: not configured for CORS
+
+	// create CORS middleware
+	corsMw, err := cors.NewMiddleware(cors.Config{
+		Origins: []string{"https://example.com"},
+		Methods: []string{
+			http.MethodGet,
+			http.MethodPost,
+			http.MethodPut,
+			http.MethodDelete,
+		},
+		RequestHeaders: []string{"Authorization"},
+	})
+	if err != nil {
+		log.Fatal(err)
+	}
+	corsMw.SetDebug(true) // turn debug mode on (optional)
+
+	api := e.Group("/api", echo.WrapMiddleware(corsMw.Wrap))
+	api.GET("/users", handleUsersGet)
+	api.POST("/users", handleUsersPost)
+	api.PUT("/users", handleUsersPut)
+	api.DELETE("/users", handleUsersDelete)
+
+	log.Fatal(e.Start(":8080"))
+}
+
+func handleHello(c echo.Context) error {
+	return c.String(http.StatusOK, "Hello, World!")
+}
+
+func handleUsersGet(c echo.Context) error {
+	return nil // omitted implementation
+}
+
+func handleUsersPost(c echo.Context) error {
+	return nil // omitted implementation
+}
+
+func handleUsersPut(c echo.Context) error {
+	return nil // omitted implementation
+}
+
+func handleUsersDelete(c echo.Context) error {
+	return nil // omitted implementation
+}
