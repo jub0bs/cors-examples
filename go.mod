@@ -5,6 +5,7 @@ go 1.22
 require (
 	github.com/go-chi/chi v1.5.5
 	github.com/gofiber/fiber/v2 v2.52.2
+	github.com/gorilla/mux v1.8.1
 	github.com/jub0bs/cors v0.1.0
 	github.com/labstack/echo/v4 v4.11.4
 )
