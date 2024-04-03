@@ -12,8 +12,8 @@ for [Go][go].
 The example invariably consists in creating a CORS middleware that
 
 - allows anonymous access from Web origin `https://example.com`,
-- with any HTTP method among GET, POST, PUT, or DELETE, and
-- (optionally) with request header Authorization,
+- with requests whose method is either `GET` or `POST`, and
+- (optionally) with request header `Authorization`,
 
 and applying the middleware in question to all the resources accessible
 under an `/api/` path.

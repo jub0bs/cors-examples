@@ -14,13 +14,8 @@ func main() {
 
 	// create CORS middleware
 	corsMw, err := cors.NewMiddleware(cors.Config{
-		Origins: []string{"https://example.com"},
-		Methods: []string{
-			http.MethodGet,
-			http.MethodPost,
-			http.MethodPut,
-			http.MethodDelete,
-		},
+		Origins:        []string{"https://example.com"},
+		Methods:        []string{http.MethodGet, http.MethodPost},
 		RequestHeaders: []string{"Authorization"},
 	})
 	if err != nil {
@@ -31,8 +26,6 @@ func main() {
 	api := e.Group("/api", echo.WrapMiddleware(corsMw.Wrap))
 	api.GET("/users", handleUsersGet)
 	api.POST("/users", handleUsersPost)
-	api.PUT("/users", handleUsersPut)
-	api.DELETE("/users", handleUsersDelete)
 
 	log.Fatal(e.Start(":8080"))
 }
@@ -46,13 +39,5 @@ func handleUsersGet(c echo.Context) error {
 }
 
 func handleUsersPost(c echo.Context) error {
-	return nil // omitted implementation
-}
-
-func handleUsersPut(c echo.Context) error {
-	return nil // omitted implementation
-}
-
-func handleUsersDelete(c echo.Context) error {
 	return nil // omitted implementation
 }

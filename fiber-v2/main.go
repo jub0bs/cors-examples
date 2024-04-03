@@ -15,13 +15,8 @@ func main() {
 
 	// create CORS middleware
 	corsMw, err := cors.NewMiddleware(cors.Config{
-		Origins: []string{"https://example.com"},
-		Methods: []string{
-			http.MethodGet,
-			http.MethodPost,
-			http.MethodPut,
-			http.MethodDelete,
-		},
+		Origins:        []string{"https://example.com"},
+		Methods:        []string{http.MethodGet, http.MethodPost},
 		RequestHeaders: []string{"Authorization"},
 	})
 	if err != nil {
@@ -33,8 +28,6 @@ func main() {
 	api.Use(adaptor.HTTPMiddleware(corsMw.Wrap))
 	api.Get("/users", handleUsersGet)
 	api.Post("/users", handleUsersPost)
-	api.Put("/users", handleUsersPut)
-	api.Delete("/users", handleUsersDelete)
 
 	log.Fatal(app.Listen(":8080"))
 }
@@ -48,13 +41,5 @@ func handleUsersGet(c *fiber.Ctx) error {
 }
 
 func handleUsersPost(c *fiber.Ctx) error {
-	return nil // omitted implementation
-}
-
-func handleUsersPut(c *fiber.Ctx) error {
-	return nil // omitted implementation
-}
-
-func handleUsersDelete(c *fiber.Ctx) error {
 	return nil // omitted implementation
 }

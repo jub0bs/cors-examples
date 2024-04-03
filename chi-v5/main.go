@@ -14,13 +14,8 @@ func main() {
 	mux.Get("/hello", handleHello) // note: not configured for CORS
 
 	corsMw, err := cors.NewMiddleware(cors.Config{
-		Origins: []string{"https://example.com"},
-		Methods: []string{
-			http.MethodGet,
-			http.MethodPost,
-			http.MethodPut,
-			http.MethodDelete,
-		},
+		Origins:        []string{"https://example.com"},
+		Methods:        []string{http.MethodGet, http.MethodPost},
 		RequestHeaders: []string{"Authorization"},
 	})
 	if err != nil {
@@ -32,8 +27,6 @@ func main() {
 	mux.Mount("/api", corsMw.Wrap(api))
 	api.Get("/users", handleUsersGet)
 	api.Post("/users", handleUsersPost)
-	api.Put("/users", handleUsersPut)
-	api.Delete("/users", handleUsersDelete)
 
 	log.Fatal(http.ListenAndServe(":8080", mux))
 }
@@ -47,13 +40,5 @@ func handleUsersGet(w http.ResponseWriter, _ *http.Request) {
 }
 
 func handleUsersPost(w http.ResponseWriter, _ *http.Request) {
-	// omitted implementation
-}
-
-func handleUsersPut(w http.ResponseWriter, _ *http.Request) {
-	// omitted implementation
-}
-
-func handleUsersDelete(w http.ResponseWriter, _ *http.Request) {
 	// omitted implementation
 }
