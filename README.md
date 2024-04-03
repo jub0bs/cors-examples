@@ -24,14 +24,14 @@ In addition, a `/hello` path is left unconfigured for CORS.
 
 | Library              | Compatibility | Path to example                            |
 | -------------------- | ------------- | ------------------------------------------ |
-| [Chi][chi]           | v1.5+         | [chi/main.go](chi/main.go)                 |
-| [Echo][echo-v4]      | v4.11+        | [echo-v4/main.go](echo-v4/main.go)         |
+| [Chi][chi]           | v5.0+         | [chi=v5/main.go](chi-v5/main.go)           |
+| [Echo][echo]         | v4.11+        | [echo-v4/main.go](echo-v4/main.go)         |
 | [Fiber][fiber]       | v2.52+        | [fiber-v2/main.go](fiber-v2/main.go)       |
 | [gorilla/mux][mux]   | v1.8+         | [gorilla-mux/main.go](gorilla-mux/main.go) |
 | [net/http][net-http] | v1.22+        | [net-http/main.go](net-http/main.go)       |
 
 [chi]: https://go-chi.io/#/
-[echo-v4]: https://echo.labstack.com/
+[echo]: https://echo.labstack.com/
 [fiber]: https://gofiber.io/
 [go]: https://go.dev/
 [jub0bs-cors]: https://pkg.go.dev/github.com/jub0bs/cors
