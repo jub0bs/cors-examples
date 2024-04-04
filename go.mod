@@ -6,7 +6,7 @@ require (
 	github.com/go-chi/chi/v5 v5.0.12
 	github.com/gofiber/fiber/v2 v2.52.4
 	github.com/gorilla/mux v1.8.1
-	github.com/jub0bs/cors v0.1.1
+	github.com/jub0bs/cors v0.1.2
 	github.com/labstack/echo/v4 v4.11.4
 )
 
@@ -24,7 +24,7 @@ require (
 	github.com/valyala/fasttemplate v1.2.2 // indirect
 	github.com/valyala/tcplisten v1.0.0 // indirect
 	golang.org/x/crypto v0.21.0 // indirect
-	golang.org/x/net v0.22.0 // indirect
+	golang.org/x/net v0.23.0 // indirect
 	golang.org/x/sys v0.18.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
 )
