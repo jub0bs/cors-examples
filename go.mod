@@ -6,7 +6,7 @@ require (
 	github.com/go-chi/chi/v5 v5.1.0
 	github.com/gofiber/fiber/v2 v2.52.5
 	github.com/gorilla/mux v1.8.1
-	github.com/jub0bs/cors v0.3.0
+	github.com/jub0bs/cors v0.3.1
 	github.com/labstack/echo/v4 v4.12.0
 )
 
