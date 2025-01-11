@@ -1,12 +1,14 @@
 module github.com/jub0bs/fcors-examples
 
-go 1.22
+go 1.23
+
+toolchain go1.23.4
 
 require (
 	github.com/go-chi/chi/v5 v5.2.0
 	github.com/gofiber/fiber/v2 v2.52.6
 	github.com/gorilla/mux v1.8.1
-	github.com/jub0bs/cors v0.3.1
+	github.com/jub0bs/cors v0.5.0
 	github.com/labstack/echo/v4 v4.13.3
 )
 
