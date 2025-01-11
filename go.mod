@@ -3,7 +3,7 @@ module github.com/jub0bs/fcors-examples
 go 1.22
 
 require (
-	github.com/go-chi/chi/v5 v5.1.0
+	github.com/go-chi/chi/v5 v5.2.0
 	github.com/gofiber/fiber/v2 v2.52.6
 	github.com/gorilla/mux v1.8.1
 	github.com/jub0bs/cors v0.3.1
