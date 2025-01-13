@@ -40,7 +40,9 @@ func main() {
 	api.HandleFunc("/users", handleUsersPost).
 		Methods(http.MethodPost, http.MethodOptions)
 
-	log.Fatal(http.ListenAndServe(":8080", router))
+	if err := http.ListenAndServe(":8080", router); err != http.ErrServerClosed {
+		log.Fatal(err)
+	}
 }
 
 func handleHello(w http.ResponseWriter, _ *http.Request) {
