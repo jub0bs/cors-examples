@@ -8,7 +8,7 @@ require (
 	github.com/go-chi/chi/v5 v5.2.2
 	github.com/gofiber/fiber/v2 v2.52.9
 	github.com/gorilla/mux v1.8.1
-	github.com/jub0bs/cors v0.8.0
+	github.com/jub0bs/cors v0.9.0
 	github.com/labstack/echo/v4 v4.13.4
 )
 
