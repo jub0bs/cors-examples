@@ -25,7 +25,7 @@ In addition, a `/hello` path is left unconfigured for CORS.
 | Library              | Compatibility | Path to example                            |
 | -------------------- | ------------- | ------------------------------------------ |
 | [Chi][chi]           | v5.2+         | [chi=v5/main.go](chi-v5/main.go)           |
-| [Echo][echo]         | v4.13+        | [echo-v4/main.go](echo-v4/main.go)         |
+| [Echo][echo]         | v4.15+        | [echo-v4/main.go](echo-v4/main.go)         |
 | [Fiber][fiber]       | v2.52+        | [fiber-v2/main.go](fiber-v2/main.go)       |
 | [gorilla/mux][mux]   | v1.8+         | [gorilla-mux/main.go](gorilla-mux/main.go) |
 | [net/http][net-http] | v1.22+        | [net-http/main.go](net-http/main.go)       |

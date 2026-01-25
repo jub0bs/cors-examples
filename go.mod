@@ -9,7 +9,7 @@ require (
 	github.com/gofiber/fiber/v2 v2.52.10
 	github.com/gorilla/mux v1.8.1
 	github.com/jub0bs/cors v0.10.0
-	github.com/labstack/echo/v4 v4.13.4
+	github.com/labstack/echo/v4 v4.15.0
 )
 
 require (
