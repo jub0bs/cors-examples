@@ -1,14 +1,12 @@
 module github.com/jub0bs/fcors-examples
 
-go 1.24.0
-
-toolchain go1.24.6
+go 1.25.0
 
 require (
 	github.com/go-chi/chi/v5 v5.2.4
 	github.com/gofiber/fiber/v2 v2.52.10
 	github.com/gorilla/mux v1.8.1
-	github.com/jub0bs/cors v0.11.0
+	github.com/jub0bs/cors v0.12.0
 	github.com/labstack/echo/v4 v4.15.0
 )
 
@@ -25,8 +23,8 @@ require (
 	github.com/valyala/fasthttp v1.51.0 // indirect
 	github.com/valyala/fasttemplate v1.2.2 // indirect
 	github.com/valyala/tcplisten v1.0.0 // indirect
-	golang.org/x/crypto v0.47.0 // indirect
-	golang.org/x/net v0.49.0 // indirect
-	golang.org/x/sys v0.40.0 // indirect
-	golang.org/x/text v0.33.0 // indirect
+	golang.org/x/crypto v0.48.0 // indirect
+	golang.org/x/net v0.50.0 // indirect
+	golang.org/x/sys v0.41.0 // indirect
+	golang.org/x/text v0.34.0 // indirect
 )
