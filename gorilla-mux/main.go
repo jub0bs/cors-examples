@@ -14,7 +14,7 @@ func main() {
 	router.HandleFunc("/hello", handleHello).
 		Methods(http.MethodGet) // note: not configured for CORS
 
-	corsMw, err := cors.NewMiddleware(cors.Config{
+	cors, err := cors.NewMiddleware(cors.Config{
 		Origins:        []string{"https://example.com"},
 		Methods:        []string{http.MethodGet, http.MethodPost},
 		RequestHeaders: []string{"Authorization"},
@@ -22,10 +22,10 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	corsMw.SetDebug(true) // turn debug mode on (optional)
+	cors.SetDebug(true) // turn debug mode on (optional)
 
 	api := router.PathPrefix("/api").Subrouter()
-	api.Use(corsMw.Wrap)
+	api.Use(cors.Wrap)
 	// Note: Because of a design quirk of gorilla/mux,
 	// if you add a matcher for some methods,
 	// you must (unfortunately) list OPTIONS among them;

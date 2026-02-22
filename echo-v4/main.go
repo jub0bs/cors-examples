@@ -13,7 +13,7 @@ func main() {
 	e.GET("/hello", handleHello) // note: not configured for CORS
 
 	// create CORS middleware
-	corsMw, err := cors.NewMiddleware(cors.Config{
+	cors, err := cors.NewMiddleware(cors.Config{
 		Origins:        []string{"https://example.com"},
 		Methods:        []string{http.MethodGet, http.MethodPost},
 		RequestHeaders: []string{"Authorization"},
@@ -21,9 +21,9 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	corsMw.SetDebug(true) // turn debug mode on (optional)
+	cors.SetDebug(true) // turn debug mode on (optional)
 
-	api := e.Group("/api", echo.WrapMiddleware(corsMw.Wrap))
+	api := e.Group("/api", echo.WrapMiddleware(cors.Wrap))
 	api.GET("/users", handleUsersGet)
 	api.POST("/users", handleUsersPost)
 
