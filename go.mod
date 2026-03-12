@@ -5,7 +5,7 @@ go 1.25.0
 require (
 	github.com/go-chi/chi/v5 v5.2.5
 	github.com/go-fuego/fuego v0.19.0
-	github.com/gofiber/fiber/v2 v2.52.11
+	github.com/gofiber/fiber/v2 v2.52.12
 	github.com/gorilla/mux v1.8.1
 	github.com/jub0bs/cors v0.13.2
 	github.com/labstack/echo/v4 v4.15.0
