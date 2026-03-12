@@ -7,7 +7,7 @@ require (
 	github.com/go-fuego/fuego v0.19.0
 	github.com/gofiber/fiber/v2 v2.52.12
 	github.com/gorilla/mux v1.8.1
-	github.com/jub0bs/cors v0.13.2
+	github.com/jub0bs/cors v0.13.3
 	github.com/labstack/echo/v4 v4.15.1
 )
 
@@ -41,9 +41,9 @@ require (
 	github.com/valyala/fasttemplate v1.2.2 // indirect
 	github.com/valyala/tcplisten v1.0.0 // indirect
 	github.com/woodsbury/decimal128 v1.4.0 // indirect
-	golang.org/x/crypto v0.48.0 // indirect
-	golang.org/x/net v0.50.0 // indirect
-	golang.org/x/sys v0.41.0 // indirect
-	golang.org/x/text v0.34.0 // indirect
+	golang.org/x/crypto v0.49.0 // indirect
+	golang.org/x/net v0.52.0 // indirect
+	golang.org/x/sys v0.42.0 // indirect
+	golang.org/x/text v0.35.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
