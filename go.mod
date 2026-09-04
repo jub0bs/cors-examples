@@ -7,7 +7,7 @@ require (
 	github.com/go-fuego/fuego v0.20.0
 	github.com/gofiber/fiber/v2 v2.52.15
 	github.com/gorilla/mux v1.8.1
-	github.com/jub0bs/cors v1.1.0
+	github.com/jub0bs/cors v1.1.1
 	github.com/labstack/echo/v4 v4.15.4
 )
 
